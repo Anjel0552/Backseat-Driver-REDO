@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TsS-N4-RmU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1573" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-af-6i1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDW-pY-pwk">
+                                <rect key="frame" x="0.0" y="587" width="188" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70980392156862748" green="0.98039215686274506" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1ua-a2-1q6"/>
+                                    <constraint firstAttribute="width" constant="188" id="oU8-xp-3UP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                <state key="normal" title="Parent">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-At-Itf">
+                                <rect key="frame" x="187" y="587" width="188" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.22745098039215686" green="0.86274509803921573" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="zxx-gP-VCE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                <state key="normal" title="Child">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Backseat Driver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNR-ej-yan">
+                                <rect key="frame" x="36" y="13" width="302" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="mOt-j9-G0W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="46"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPK-Sx-z7r">
+                                <rect key="frame" x="53" y="180" width="269" height="286"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="286" id="oWo-fz-qQc"/>
+                                </constraints>
+                                <string key="text">Welcome to "Backseat Driver"! Here you can keep your child from texting and driving by entering a driving mode. You as a parent will be able to track your child's location while they drive. You will be notified if they exit Driving Mode while driving. You will also track speed. You may choose to give you child allowence for staying on Driving Mode for the duration of the ride. </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vDW-pY-pwk" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="215-xq-xwz"/>
+                            <constraint firstItem="l8B-At-Itf" firstAttribute="baseline" secondItem="vDW-pY-pwk" secondAttribute="firstBaseline" id="34u-Zc-ppI"/>
+                            <constraint firstItem="UPK-Sx-z7r" firstAttribute="top" secondItem="GNR-ej-yan" secondAttribute="bottom" constant="82" id="8Yb-Rc-e3y"/>
+                            <constraint firstAttribute="trailing" secondItem="UPK-Sx-z7r" secondAttribute="trailing" constant="53" id="8du-Jg-l1Q"/>
+                            <constraint firstItem="vDW-pY-pwk" firstAttribute="baseline" secondItem="l8B-At-Itf" secondAttribute="firstBaseline" id="9pU-ZN-3ef"/>
+                            <constraint firstItem="UPK-Sx-z7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="53" id="BuE-wf-d4I"/>
+                            <constraint firstItem="l8B-At-Itf" firstAttribute="trailing" secondItem="aDM-af-6i1" secondAttribute="trailing" id="IQM-z1-Fcp"/>
+                            <constraint firstItem="GNR-ej-yan" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="N7z-BU-OSA"/>
+                            <constraint firstItem="UPK-Sx-z7r" firstAttribute="centerX" secondItem="GNR-ej-yan" secondAttribute="centerX" id="NCz-Ud-PVc"/>
+                            <constraint firstItem="l8B-At-Itf" firstAttribute="top" secondItem="vDW-pY-pwk" secondAttribute="top" id="QHB-tx-wkX"/>
+                            <constraint firstItem="aDM-af-6i1" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Qeu-9m-bnj"/>
+                            <constraint firstItem="UPK-Sx-z7r" firstAttribute="top" secondItem="GNR-ej-yan" secondAttribute="bottom" constant="82" id="UmX-wu-13B"/>
+                            <constraint firstItem="GNR-ej-yan" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="13" id="Yih-Jv-wIe"/>
+                            <constraint firstItem="vDW-pY-pwk" firstAttribute="leading" secondItem="aDM-af-6i1" secondAttribute="leading" id="abf-7f-c84"/>
+                            <constraint firstItem="GNR-ej-yan" firstAttribute="centerX" secondItem="aDM-af-6i1" secondAttribute="centerX" id="ar1-bb-8p7"/>
+                            <constraint firstItem="aDM-af-6i1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cjA-3Z-mMY"/>
+                            <constraint firstItem="l8B-At-Itf" firstAttribute="top" secondItem="UPK-Sx-z7r" secondAttribute="bottom" constant="121" id="d0U-ku-SKH"/>
+                            <constraint firstAttribute="trailing" secondItem="aDM-af-6i1" secondAttribute="trailing" id="dIq-fe-pdO"/>
+                            <constraint firstItem="vDW-pY-pwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kwB-G9-9Y5"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="326.5"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="JVY-7i-GUy">
+            <objects>
+                <viewController id="TsS-N4-RmU" customClass="MapViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Rq-cm-gIn"/>
+                        <viewControllerLayoutGuide type="bottom" id="ioo-q2-H52"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bAZ-kl-1ka">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-q4-mGl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2qx-q4-mGl" firstAttribute="top" secondItem="bAZ-kl-1ka" secondAttribute="top" id="Fqd-16-pCO"/>
+                            <constraint firstItem="2qx-q4-mGl" firstAttribute="bottom" secondItem="ioo-q2-H52" secondAttribute="top" id="a6w-ht-SbD"/>
+                            <constraint firstAttribute="trailing" secondItem="2qx-q4-mGl" secondAttribute="trailing" id="b1B-Qr-mPp"/>
+                            <constraint firstItem="2qx-q4-mGl" firstAttribute="leading" secondItem="bAZ-kl-1ka" secondAttribute="leading" id="oNA-a5-wx2"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myMapView" destination="2qx-q4-mGl" id="FgA-9A-Kkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LcJ-Vt-meK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178.5" y="1021.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_1573" width="750" height="1334"/>
+    </resources>
+</document>
