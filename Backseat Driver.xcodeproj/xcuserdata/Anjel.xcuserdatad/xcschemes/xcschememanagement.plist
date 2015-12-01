@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Number Keybaord.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>37FB6BF41C0CA993000EAFA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37FB6C141C0D25DE000EAFA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

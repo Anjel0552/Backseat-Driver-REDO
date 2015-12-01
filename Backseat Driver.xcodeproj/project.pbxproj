@@ -17,6 +17,19 @@
 		37FB6C101C0CF192000EAFA7 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6C0F1C0CF192000EAFA7 /* JoinViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		37FB6C201C0D25DE000EAFA7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		37FB6BF51C0CA993000EAFA7 /* Backseat Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backseat Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +105,7 @@
 				37FB6BF11C0CA993000EAFA7 /* Sources */,
 				37FB6BF21C0CA993000EAFA7 /* Frameworks */,
 				37FB6BF31C0CA993000EAFA7 /* Resources */,
+				37FB6C201C0D25DE000EAFA7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
