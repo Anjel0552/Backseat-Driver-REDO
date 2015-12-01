@@ -67,7 +67,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="286" id="oWo-fz-qQc"/>
                                 </constraints>
-                                <string key="text">Welcome to "Backseat Driver"! Here you can keep your child from texting and driving by entering a driving mode. You as a parent will be able to track your child's location while they drive. You will be notified if they exit Driving Mode while driving. You will also track speed. You may choose to give you child allowence for staying on Driving Mode for the duration of the ride. </string>
+                                <string key="text">Welcome to "Backseat Driver"! Here you can keep your child from texting and driving by entering a driving mode. You as a parent will be able to track your child's location while they drive. You will be notified if they exit Driving Mode while driving. You will also track speed. You may choose to give you child allowance for staying on Driving Mode for the duration of the ride. </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -360,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZY-lr-pZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.5" y="300.5"/>
+            <point key="canvasLocation" x="413.5" y="1041.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VhC-C1-kzT">
@@ -454,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ta-Mj-Srv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253.5" y="300.5"/>
+            <point key="canvasLocation" x="17.5" y="1041.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="JVY-7i-GUy">
