@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import MessageUI
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
     
     
     @IBOutlet weak var myMapView: MKMapView!
@@ -47,7 +48,48 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
+    @IBAction func callButton(sender: UIButton) {
+        
+//        guard let phoneNumber = numberField.text else { return }
+        
+        
+        let url:NSURL = NSURL(string: "tel://9565458321")!
+        UIApplication.sharedApplication().openURL(url)
+        
+//        print(phoneNumber)
+    }
     
+    
+    @IBAction func messageButton(sender: AnyObject) {
+        
+            var messageVC = MFMessageComposeViewController()
+            
+            messageVC.body = "";
+            messageVC.recipients = ["9565458321"]
+            messageVC.messageComposeDelegate = self;
+            
+            self.presentViewController(messageVC, animated: false, completion: nil)
+        }
+        
+        func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+            switch (result.rawValue) {
+            case MessageComposeResultCancelled.rawValue:
+                print("Message was cancelled")
+                self.dismissViewControllerAnimated(true, completion: nil)
+            case MessageComposeResultFailed.rawValue:
+                print("Message failed")
+                self.dismissViewControllerAnimated(true, completion: nil)
+            case MessageComposeResultSent.rawValue:
+                print("Message was sent")
+                self.dismissViewControllerAnimated(true, completion: nil)
+            default:
+                break;
+            }
+        }
+        
+        
+        
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

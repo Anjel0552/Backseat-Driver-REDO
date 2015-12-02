@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func touchID(sender: AnyObject) {
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+            let context = LAContext()
+            var error: NSError?
+            
+            // check if Touch ID is available
+            if context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+                let reason = "Authenticate with Touch ID"
+                context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply:
+                    {(success: Bool, error: NSError?) in
+                        
+                        if success {
+                            
+                            self.showAlertController("Touch ID Authentication Succeeded")
+                        }
+                        else {
+                            
+                            self.showAlertController("Touch ID Authentication Failed")
+                        }
+                })
+            }
+                
+            else {
+                showAlertController("Touch ID not available")
+            }
+        }
+        
+        func showAlertController(message: String) {
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view, typically from a nib.
+        }
+        
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
+        
 }
+
