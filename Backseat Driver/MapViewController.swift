@@ -62,31 +62,54 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
     
     @IBAction func messageButton(sender: AnyObject) {
         
-            var messageVC = MFMessageComposeViewController()
+            let messageVC = MFMessageComposeViewController()
             
-            messageVC.body = "";
+            messageVC.body = ""
             messageVC.recipients = ["9565458321"]
-            messageVC.messageComposeDelegate = self;
+            messageVC.messageComposeDelegate = self
             
             self.presentViewController(messageVC, animated: false, completion: nil)
         }
         
-        func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+            
             switch (result.rawValue) {
+                
             case MessageComposeResultCancelled.rawValue:
+               
                 print("Message was cancelled")
                 self.dismissViewControllerAnimated(true, completion: nil)
+            
             case MessageComposeResultFailed.rawValue:
+            
                 print("Message failed")
                 self.dismissViewControllerAnimated(true, completion: nil)
+            
             case MessageComposeResultSent.rawValue:
+            
                 print("Message was sent")
                 self.dismissViewControllerAnimated(true, completion: nil)
+            
             default:
+                
                 break;
             }
         }
+    
+    override func viewDidAppear(animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.BlackTranslucent
+        nav?.tintColor = UIColor.cyanColor()
         
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "appleswifticon")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+    }
+
         
         
         
