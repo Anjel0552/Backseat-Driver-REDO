@@ -24,9 +24,16 @@ class LoginViewController: UIViewController {
                     
                     if success {
                         
-                        self.showAlertController("Access Granted😉")
-                    }
-                    else {
+//                        self.showAlertController("Access Granted😉")
+                        
+                        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let MapsVC = mainSB.instantiateViewControllerWithIdentifier("MAP") as?
+                        UINavigationController
+                        
+                        self.navigationController!.presentViewController(MapsVC!, animated: true, completion: nil)
+                                            
+                    } else {
                         
                         self.showAlertController("☠Access Denied☠")
                     }

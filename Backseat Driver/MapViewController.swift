@@ -89,7 +89,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
             
             print("Message was sent")
             self.dismissViewControllerAnimated(true, completion: nil)
-            
+        
         default:
             
             break;
