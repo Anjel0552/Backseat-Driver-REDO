@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		370E0EB71C109EFF00F5A89C /* appleswifticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EB61C109EFF00F5A89C /* appleswifticon.png */; };
+		370E0EBE1C10A22700F5A89C /* Devil Breeze Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EB91C10A22700F5A89C /* Devil Breeze Bold.ttf */; };
+		370E0EBF1C10A22700F5A89C /* Devil Breeze Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBA1C10A22700F5A89C /* Devil Breeze Book.ttf */; };
+		370E0EC01C10A22700F5A89C /* Devil Breeze Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */; };
+		370E0EC11C10A22700F5A89C /* Devil Breeze Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */; };
+		370E0EC21C10A22700F5A89C /* Devil Breeze Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */; };
+		370E0EC41C10D9DE00F5A89C /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EC31C10D9DE00F5A89C /* logosmall.png */; };
+		370E0EC61C10DF7F00F5A89C /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC51C10DF7F00F5A89C /* StartingViewController.swift */; };
 		37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */; };
 		37FB6BFB1C0CA993000EAFA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */; };
 		37FB6BFE1C0CA993000EAFA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB6BFC1C0CA993000EAFA7 /* Main.storyboard */; };
@@ -33,6 +40,13 @@
 
 /* Begin PBXFileReference section */
 		370E0EB61C109EFF00F5A89C /* appleswifticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appleswifticon.png; sourceTree = "<group>"; };
+		370E0EB91C10A22700F5A89C /* Devil Breeze Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Bold.ttf"; sourceTree = "<group>"; };
+		370E0EBA1C10A22700F5A89C /* Devil Breeze Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Book.ttf"; sourceTree = "<group>"; };
+		370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Demi.ttf"; sourceTree = "<group>"; };
+		370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Light.ttf"; sourceTree = "<group>"; };
+		370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Medium.ttf"; sourceTree = "<group>"; };
+		370E0EC31C10D9DE00F5A89C /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosmall.png; sourceTree = "<group>"; };
+		370E0EC51C10DF7F00F5A89C /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
 		37FB6BF51C0CA993000EAFA7 /* Backseat Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backseat Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -56,12 +70,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370E0EB81C10A1FF00F5A89C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				370E0EB91C10A22700F5A89C /* Devil Breeze Bold.ttf */,
+				370E0EBA1C10A22700F5A89C /* Devil Breeze Book.ttf */,
+				370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */,
+				370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */,
+				370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		37FB6BEC1C0CA993000EAFA7 = {
 			isa = PBXGroup;
 			children = (
 				37FB6BF71C0CA993000EAFA7 /* Backseat Driver */,
 				37FB6C0A1C0CA99A000EAFA7 /* System */,
 				37FB6BF61C0CA993000EAFA7 /* Products */,
+				370E0EC31C10D9DE00F5A89C /* logosmall.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,8 +103,10 @@
 		37FB6BF71C0CA993000EAFA7 /* Backseat Driver */ = {
 			isa = PBXGroup;
 			children = (
+				370E0EB81C10A1FF00F5A89C /* Resources */,
 				37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */,
 				37FB6BFC1C0CA993000EAFA7 /* Main.storyboard */,
+				370E0EC51C10DF7F00F5A89C /* StartingViewController.swift */,
 				37FB6C0D1C0CF187000EAFA7 /* LoginViewController.swift */,
 				37FB6C0F1C0CF192000EAFA7 /* JoinViewController.swift */,
 				37FB6C0B1C0CB824000EAFA7 /* Child.storyboard */,
@@ -158,10 +187,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FB6C031C0CA993000EAFA7 /* LaunchScreen.storyboard in Resources */,
+				370E0EC01C10A22700F5A89C /* Devil Breeze Demi.ttf in Resources */,
 				37FB6C001C0CA993000EAFA7 /* Assets.xcassets in Resources */,
+				370E0EC11C10A22700F5A89C /* Devil Breeze Light.ttf in Resources */,
 				370E0EB71C109EFF00F5A89C /* appleswifticon.png in Resources */,
+				370E0EC21C10A22700F5A89C /* Devil Breeze Medium.ttf in Resources */,
+				370E0EBE1C10A22700F5A89C /* Devil Breeze Bold.ttf in Resources */,
+				370E0EC41C10D9DE00F5A89C /* logosmall.png in Resources */,
 				37FB6BFE1C0CA993000EAFA7 /* Main.storyboard in Resources */,
 				37FB6C0C1C0CB825000EAFA7 /* Child.storyboard in Resources */,
+				370E0EBF1C10A22700F5A89C /* Devil Breeze Book.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +211,7 @@
 				37FB6BFB1C0CA993000EAFA7 /* MapViewController.swift in Sources */,
 				37FB6C101C0CF192000EAFA7 /* JoinViewController.swift in Sources */,
 				37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */,
+				370E0EC61C10DF7F00F5A89C /* StartingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
