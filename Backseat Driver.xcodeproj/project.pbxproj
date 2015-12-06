@@ -14,7 +14,8 @@
 		370E0EC11C10A22700F5A89C /* Devil Breeze Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */; };
 		370E0EC21C10A22700F5A89C /* Devil Breeze Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */; };
 		370E0EC41C10D9DE00F5A89C /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EC31C10D9DE00F5A89C /* logosmall.png */; };
-		370E0EC61C10DF7F00F5A89C /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC51C10DF7F00F5A89C /* StartingViewController.swift */; };
+		370E0EC81C13629900F5A89C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC71C13629900F5A89C /* SettingsViewController.swift */; };
+		370E0ECA1C1362F700F5A89C /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */; };
 		37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */; };
 		37FB6BFB1C0CA993000EAFA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */; };
 		37FB6BFE1C0CA993000EAFA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB6BFC1C0CA993000EAFA7 /* Main.storyboard */; };
@@ -46,7 +47,8 @@
 		370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Light.ttf"; sourceTree = "<group>"; };
 		370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Medium.ttf"; sourceTree = "<group>"; };
 		370E0EC31C10D9DE00F5A89C /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosmall.png; sourceTree = "<group>"; };
-		370E0EC51C10DF7F00F5A89C /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		370E0EC71C13629900F5A89C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceViewController.swift; path = ../ChoiceViewController.swift; sourceTree = "<group>"; };
 		37FB6BF51C0CA993000EAFA7 /* Backseat Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backseat Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -105,8 +107,9 @@
 			children = (
 				370E0EB81C10A1FF00F5A89C /* Resources */,
 				37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */,
+				370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */,
 				37FB6BFC1C0CA993000EAFA7 /* Main.storyboard */,
-				370E0EC51C10DF7F00F5A89C /* StartingViewController.swift */,
+				370E0EC71C13629900F5A89C /* SettingsViewController.swift */,
 				37FB6C0D1C0CF187000EAFA7 /* LoginViewController.swift */,
 				37FB6C0F1C0CF192000EAFA7 /* JoinViewController.swift */,
 				37FB6C0B1C0CB824000EAFA7 /* Child.storyboard */,
@@ -210,8 +213,9 @@
 				37FB6C0E1C0CF187000EAFA7 /* LoginViewController.swift in Sources */,
 				37FB6BFB1C0CA993000EAFA7 /* MapViewController.swift in Sources */,
 				37FB6C101C0CF192000EAFA7 /* JoinViewController.swift in Sources */,
+				370E0ECA1C1362F700F5A89C /* ChoiceViewController.swift in Sources */,
 				37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */,
-				370E0EC61C10DF7F00F5A89C /* StartingViewController.swift in Sources */,
+				370E0EC81C13629900F5A89C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

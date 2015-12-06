@@ -12,6 +12,30 @@ import MessageUI
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
     
+    @IBAction func pressedLogout(sender: AnyObject) {
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
+        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("Choice") as?
+        UINavigationController
+        
+        self.navigationController?.presentViewController(ChoiceVC!, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func pressedSettings(sender: AnyObject) {
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
+        let settingsVC = mainSB.instantiateViewControllerWithIdentifier("settings") as?
+            SettingsViewController
+        
+        self.navigationController?.presentViewController(settingsVC!, animated: true, completion: nil)
+        
+    }
+    
+    
     
     @IBOutlet weak var myMapView: MKMapView!
     
@@ -99,13 +123,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
     override func viewDidAppear(animated: Bool) {
         
         let nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.BlackTranslucent
-        nav?.tintColor = UIColor.clearColor()
+        
+        nav?.tintColor = UIColor.whiteColor()
+        nav?.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        nav?.shadowImage = UIImage()
+//        nav?.translucent = false
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         imageView.contentMode = .ScaleAspectFit
         
-        let image = UIImage(named: "appleswifticon")
+        let image = UIImage(named: "logosmall")
+        
         imageView.image = image
         
         navigationItem.titleView = imageView

@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
         
         // check if Touch ID is available
         if context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "Authenticate with Touch ID"
+            let reason = "Unlock with Touch ID"
             context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply:
                 {(success: Bool, error: NSError?) in
                     
@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
                         let MapsVC = mainSB.instantiateViewControllerWithIdentifier("MAP") as?
                         UINavigationController
                         
-                        self.navigationController!.presentViewController(MapsVC!, animated: true, completion: nil)
-                                            
+                        self.navigationController?.presentViewController(MapsVC!, animated: true, completion: nil)
+                        
                     } else {
                         
                         self.showAlertController("☠Access Denied☠")

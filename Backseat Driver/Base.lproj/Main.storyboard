@@ -11,10 +11,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Starting View Controller-->
+        <!--Choice View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartingViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ChoiceViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191.5" y="326.5"/>
+            <point key="canvasLocation" x="1191.5" y="359.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wqj-Nd-edy">
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZY-lr-pZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090.5" y="1178.5"/>
+            <point key="canvasLocation" x="1440.5" y="1206.5"/>
         </scene>
         <!--Join View Controller-->
         <scene sceneID="VhC-C1-kzT">
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ta-Mj-Srv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687.5" y="1178.5"/>
+            <point key="canvasLocation" x="961.5" y="1206.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="JVY-7i-GUy">
@@ -266,7 +266,7 @@
                                 </state>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-q4-mGl">
-                                <rect key="frame" x="0.0" y="64" width="375" height="478"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="542"/>
                                 <animations/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed (MPH):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH4-to-lLn">
@@ -311,7 +311,20 @@
                         <animations/>
                         <color key="backgroundColor" red="0.23921568627450979" green="0.80392156862745101" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="s0M-Zx-5He"/>
+                    <navigationItem key="navigationItem" id="s0M-Zx-5He">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="PtY-SB-isP">
+                            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pressedLogout:" destination="TsS-N4-RmU" id="Y1g-A1-rLa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="q1O-or-7bx">
+                            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pressedSettings:" destination="TsS-N4-RmU" id="B2P-UX-3Uv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myMapView" destination="2qx-q4-mGl" id="FgA-9A-Kkl"/>
@@ -320,6 +333,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LcJ-Vt-meK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1175.5" y="1997.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="lnc-Vv-QEE">
+            <objects>
+                <viewController storyboardIdentifier="settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n9w-u4-abG" customClass="SettingsViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H9R-MM-9Ml"/>
+                        <viewControllerLayoutGuide type="bottom" id="hde-V1-Nbu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AAe-Ma-z2G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgK-88-Ihw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616.5" y="1997.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H42-v8-jMR">
@@ -335,7 +368,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="TsS-N4-RmU" kind="show" id="YSH-i4-iNx"/>
+                        <segue destination="TsS-N4-RmU" kind="relationship" relationship="rootViewController" id="VyR-kK-5TX"/>
                     </connections>
                 </navigationController>
             </objects>
@@ -344,8 +377,9 @@
         <!--Navigation Controller-->
         <scene sceneID="q3X-Pb-coR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pl2-f5-GZ7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Choice" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pl2-f5-GZ7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nH3-e9-x9X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -358,7 +392,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKd-1e-88g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="326"/>
+            <point key="canvasLocation" x="658.5" y="359.5"/>
         </scene>
     </scenes>
     <resources>
