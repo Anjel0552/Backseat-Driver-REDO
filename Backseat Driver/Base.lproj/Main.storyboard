@@ -26,6 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-af-6i1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
+                                <color key="backgroundColor" red="1" green="0.13333333333333333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to &quot;Guardian&quot;! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPK-Sx-z7r">
                                 <rect key="frame" x="53" y="60" width="269" height="54"/>
@@ -75,6 +76,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1191.5" y="359.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="plM-vx-Fq1">
+            <objects>
+                <viewController id="BAw-l0-ryY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wy0-Gg-S4n"/>
+                        <viewControllerLayoutGuide type="bottom" id="I8y-9Q-yOF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cft-AU-MfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qc3-fn-CMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="1193"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wqj-Nd-edy">
@@ -126,6 +146,7 @@
                                 </state>
                                 <connections>
                                     <action selector="touchID:" destination="0yo-Hb-1VJ" eventType="touchUpInside" id="fto-lI-BuA"/>
+                                    <segue destination="TsS-N4-RmU" kind="show" id="G3o-Bc-R2r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,17 +203,17 @@
                                     <segue destination="0yo-Hb-1VJ" kind="show" id="gQN-jo-BGP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you the. . ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-DH-bQW">
-                                <rect key="frame" x="94" y="290" width="187" height="38"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ki-8X-qIJ">
                                 <rect key="frame" x="151" y="460" width="73" height="29"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you the. . ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-DH-bQW">
+                                <rect key="frame" x="116" y="298" width="143" height="38"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -262,7 +283,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="29"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -311,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ta-Mj-Srv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961.5" y="1206.5"/>
+            <point key="canvasLocation" x="791.5" y="1188.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="JVY-7i-GUy">
@@ -439,9 +460,6 @@
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TsS-N4-RmU" kind="relationship" relationship="rootViewController" id="VyR-kK-5TX"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RM4-xw-k3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

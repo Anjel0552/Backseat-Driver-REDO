@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import MessageUI
+import Parse
+
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
     
@@ -40,6 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
     @IBOutlet weak var myMapView: MKMapView!
     
     let lManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

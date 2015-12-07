@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="422.5" y="121.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Child Options View Controller-->
         <scene sceneID="kTO-nm-tKd">
             <objects>
-                <viewController id="TZG-lX-2hy" sceneMemberID="viewController">
+                <viewController id="TZG-lX-2hy" customClass="ChildOptionsViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wjx-X8-4bV"/>
                         <viewControllerLayoutGuide type="bottom" id="3eD-8d-veq"/>
@@ -128,6 +128,17 @@
                                 <rect key="frame" x="67" y="519" width="240" height="128"/>
                                 <animations/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuB-QW-3xN">
+                                <rect key="frame" x="20" y="629" width="94" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.84705882349999995" green="0.074509803920000006" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutpressed:" destination="TZG-lX-2hy" eventType="touchUpInside" id="SNC-hJ-Mc3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

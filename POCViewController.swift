@@ -9,6 +9,24 @@
 import UIKit
 
 class POCViewController: UIViewController {
+    
+    override func viewDidAppear(animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+        
+        nav?.tintColor = UIColor.whiteColor()
+        nav?.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        nav?.shadowImage = UIImage()
+        nav?.translucent = true
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "logosmall")
+        
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+    }
 
     
     @IBAction func childPressed(sender: AnyObject) {
@@ -25,7 +43,7 @@ class POCViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {

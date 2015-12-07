@@ -11,6 +11,24 @@ import LocalAuthentication
 
 class LoginViewController: UIViewController {
     
+    override func viewDidAppear(animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+        
+        nav?.tintColor = UIColor.whiteColor()
+        nav?.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        nav?.shadowImage = UIImage()
+        nav?.translucent = true
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "logosmall")
+        
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+    }
+    
     @IBAction func touchID(sender: AnyObject) {
         
         let context = LAContext()
@@ -58,28 +76,12 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
         
     }
-    override func viewDidAppear(animated: Bool) {
-        let nav = self.navigationController?.navigationBar
-        
-        nav?.tintColor = UIColor.whiteColor()
-        nav?.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        nav?.shadowImage = UIImage()
-        nav?.translucent = true
-        
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        imageView.contentMode = .ScaleAspectFit
-        
-        let image = UIImage(named: "logosmall")
-        
-        imageView.image = image
-        
-        navigationItem.titleView = imageView
-        
-        func didReceiveMemoryWarning() {
+    
+        override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
         
         
     }
-}
+

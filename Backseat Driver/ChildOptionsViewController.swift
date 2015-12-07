@@ -1,29 +1,34 @@
 //
-//  ChoiceViewController.swift
+//  ChildOptionsViewController.swift
 //  Backseat Driver
 //
-//  Created by Anjel Villafranco on 12/5/15.
+//  Created by Anjel Villafranco on 12/7/15.
 //  Copyright © 2015 Anjel Villafranco. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class ChoiceViewController: UIViewController {
+class ChildOptionsViewController: UIViewController {
+
+    
+    @IBAction func logoutpressed(sender: AnyObject) {
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
+        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("Choice") as?
+        UINavigationController
+        
+        self.navigationController?.presentViewController(ChoiceVC!, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBarHidden = true
-        
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-        
+        // Do any additional setup after loading the view.
     }
 
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -39,5 +44,4 @@ class ChoiceViewController: UIViewController {
     }
     */
 
-}
 }
