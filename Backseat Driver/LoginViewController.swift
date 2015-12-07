@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
                     
                     if success {
                         
-//                        self.showAlertController("Access Granted😉")
+                        // self.showAlertController("Access Granted😉")
                         
                         let mainSB = UIStoryboard(name: "Main", bundle: nil)
                         
