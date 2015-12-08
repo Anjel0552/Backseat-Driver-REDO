@@ -7,8 +7,49 @@
 //
 
 import UIKit
+import Parse
 
 class JoinViewController: UIViewController {
+    
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBAction func registerButtonPressed(sender: UIButton) {
+        
+//        guard let username = usernameField.text else { return }
+//
+//        guard let password = passwordField.text else { return }
+//
+//        guard let email = emailField.text else { return }
+        
+        let user = PFUser()
+        
+        user.username = usernameField.text!
+        
+        user.password = passwordField.text!
+        
+        user.email = emailField.text!
+        
+        user.signUpInBackgroundWithBlock {
+            
+            (succeeded: Bool, error) -> Void in
+            if error == nil {
+                
+                print("Joined")
+                
+            } else {
+                
+                let errorString = error!.userInfo["error"] as? NSString
+                
+                print(errorString)
+            }
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
