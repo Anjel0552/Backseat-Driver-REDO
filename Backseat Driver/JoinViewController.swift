@@ -19,12 +19,6 @@ class JoinViewController: UIViewController {
     
     @IBAction func registerButtonPressed(sender: UIButton) {
         
-//        guard let username = usernameField.text else { return }
-//
-//        guard let password = passwordField.text else { return }
-//
-//        guard let email = emailField.text else { return }
-        
         let user = PFUser()
         
         user.username = usernameField.text!
@@ -38,7 +32,12 @@ class JoinViewController: UIViewController {
             (succeeded: Bool, error) -> Void in
             if error == nil {
                 
-                print("Joined")
+                let mainSB = UIStoryboard(name: "Main", bundle: nil)
+                
+                let mapsVC = mainSB.instantiateViewControllerWithIdentifier("maps") as?
+                UINavigationController
+                
+                self.navigationController?.presentViewController(mapsVC!, animated: true, completion: nil)
                 
             } else {
                 
@@ -77,19 +76,9 @@ class JoinViewController: UIViewController {
         
         func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
+            
             // Dispose of any resources that can be recreated.
+            
         }
-        
-        
-        /*
-        // MARK: - Navigation
-        
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        }
-        */
-        
     }
 }

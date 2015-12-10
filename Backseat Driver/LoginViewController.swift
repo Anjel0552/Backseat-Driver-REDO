@@ -26,6 +26,14 @@ class LoginViewController: UIViewController {
             
             if user != nil {
                 
+                
+                let mainSB = UIStoryboard(name: "Main", bundle: nil)
+            
+                let MapsVC = mainSB.instantiateViewControllerWithIdentifier("MAP") as?
+                UINavigationController
+                
+                self.navigationController?.presentViewController(MapsVC!, animated: true, completion: nil)
+                
                 print("Logged in")
                 
             } else {
