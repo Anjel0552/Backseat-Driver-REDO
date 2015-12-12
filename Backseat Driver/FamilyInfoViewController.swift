@@ -1,15 +1,16 @@
 //
-//  POCViewController.swift
+//  FamilyInfoViewController.swift
 //  Backseat Driver
 //
-//  Created by Anjel Villafranco on 12/6/15.
+//  Created by Anjel Villafranco on 12/11/15.
 //  Copyright © 2015 Anjel Villafranco. All rights reserved.
 //
 
 import UIKit
+import Parse
 
-class POCViewController: UIViewController {
-    
+class FamilyInfoViewController: UIViewController {
+
     override func viewDidAppear(animated: Bool) {
         let nav = self.navigationController?.navigationBar
         
@@ -26,24 +27,55 @@ class POCViewController: UIViewController {
         imageView.image = image
         
         navigationItem.titleView = imageView
+        
+    }
+    
+    @IBOutlet weak var familyName: UITextField!
+    
+    @IBOutlet weak var childOneName: UITextField!
+    
+    @IBOutlet weak var parentPhoneNumber: UITextField!
+    
+    @IBOutlet weak var childPhoneNumber: UITextField!
+    
+   
+    @IBAction func pressedComplete(sender: AnyObject) {
+   
+    
+        let parent: PFObject = PFObject(className: "Parent")
+            
+            parent["childPhone"] = childPhoneNumber.text
+            
+            parent["familyname"] = familyName.text
+        
+        let child: PFObject = PFObject(className: "Child")
+        
+            child["parentPhone"] = parentPhoneNumber.text
+        
+            child["name"] = childOneName.text
+        
+            child["parent"] = parent
+            
+        parent.saveInBackgroundWithBlock({ (success, error) -> Void in
+            
+            
+            child.saveInBackgroundWithBlock({ (success, error) -> Void in
+                
+                print("both saved")
+                
+            })
+            
+        })
+        
+        
+
     }
 
-    
-    @IBAction func childPressed(sender: AnyObject) {
-        
-        let childSB = UIStoryboard(name: "Child", bundle: nil)
-        
-        let ChildLoginVC = childSB.instantiateViewControllerWithIdentifier("childlogin") as?
-        ChildLoginViewController
-        
-        self.navigationController?.presentViewController(ChildLoginVC!, animated: true, completion: nil)
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBarHidden = false
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,3 +95,4 @@ class POCViewController: UIViewController {
     */
 
 }
+

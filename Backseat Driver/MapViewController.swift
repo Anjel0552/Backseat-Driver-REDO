@@ -11,38 +11,32 @@ import MapKit
 import MessageUI
 import Parse
 
+class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate {
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
+    @IBOutlet weak var speedLabel: UILabel!
     
-    @IBAction func pressedLogout(sender: AnyObject) {
+    override func viewDidAppear(animated: Bool) {
         
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        let nav = self.navigationController?.navigationBar
         
-        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("Choice") as?
-        UINavigationController
+        nav?.tintColor = UIColor.whiteColor()
+        nav?.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        nav?.shadowImage = UIImage()
         
-        self.navigationController?.presentViewController(ChoiceVC!, animated: true, completion: nil)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "logosmall")
+        
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
         
     }
-    
-    
-    @IBAction func pressedSettings(sender: AnyObject) {
-        
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
-        
-        let settingsVC = mainSB.instantiateViewControllerWithIdentifier("settings") as?
-            SettingsViewController
-        
-        self.navigationController?.presentViewController(settingsVC!, animated: true, completion: nil)
-        
-    }
-    
-    
     
     @IBOutlet weak var myMapView: MKMapView!
     
     let lManager = CLLocationManager()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +49,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         // Show pretty blue dot
         myMapView.showsUserLocation = true
         
-        //        lManager.startUpdatingLocation()
+        lManager.startUpdatingLocation()
         
-        lManager.requestLocation()
+    }
+    
+    var speed: CLLocationSpeed! {
+        
+        didSet {
+            
+            mph = speed * 2.23694
+            print(speed)
+            
+            // set hidden bsaed on mph
+        }
+        
+    }
+    
+    var mph: Double = 0 {
+        
+        didSet {
+            
+            speedLabel.text = "\(Int(mph))"
+            
+        }
         
     }
     
@@ -66,26 +80,58 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         for location in locations {
             
             print(location.coordinate.latitude, location.coordinate.longitude)
+            speed = location.speed
+            
+            let point = PFGeoPoint(location: location)
+            
+            print(PFGeoPoint(location: location))
             
         }
+        
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         
         print(error)
+        
+    }
+
+    
+    @IBAction func pressedLogout(sender: AnyObject) {
+        
+        PFUser.logOut()
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
+        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("Choice") as?
+        UINavigationController
+        
+        self.navigationController?.presentViewController(ChoiceVC!, animated: true, completion: nil)
+        
+        print("Logged Out")
+        
+    }
+    
+    @IBAction func pressedSettings(sender: AnyObject) {
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
+        let settingsVC = mainSB.instantiateViewControllerWithIdentifier("settings") as?
+            SettingsViewController
+        
+        self.navigationController?.presentViewController(settingsVC!, animated: true, completion: nil)
+        
     }
     
     @IBAction func callButton(sender: UIButton) {
         
-        //        guard let phoneNumber = numberField.text else { return }
-        
+        //  guard let phoneNumber = numberField.text else { return }
         
         let url:NSURL = NSURL(string: "tel://9565458321")!
         UIApplication.sharedApplication().openURL(url)
         
         //        print(phoneNumber)
     }
-    
     
     @IBAction func messageButton(sender: AnyObject) {
         
@@ -96,6 +142,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         messageVC.messageComposeDelegate = self
         
         self.presentViewController(messageVC, animated: false, completion: nil)
+        
     }
     
     func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
@@ -121,26 +168,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
             
             break;
         }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
-        let nav = self.navigationController?.navigationBar
-        
-        nav?.tintColor = UIColor.whiteColor()
-        nav?.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        nav?.shadowImage = UIImage()
-//        nav?.translucent = false
-        
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        imageView.contentMode = .ScaleAspectFit
-        
-        let image = UIImage(named: "logosmall")
-        
-        imageView.image = image
-        
-        navigationItem.titleView = imageView
-        
     }
     
     override func didReceiveMemoryWarning() {

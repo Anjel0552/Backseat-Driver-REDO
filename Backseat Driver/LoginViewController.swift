@@ -8,7 +8,7 @@
 
 import UIKit
 import LocalAuthentication
-import Parse 
+import Parse
 
 class LoginViewController: UIViewController {
     

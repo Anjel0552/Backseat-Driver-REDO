@@ -30,14 +30,18 @@ class JoinViewController: UIViewController {
         user.signUpInBackgroundWithBlock {
             
             (succeeded: Bool, error) -> Void in
-            if error == nil {
+            
+            
+            if error == nil  {
                 
-                let mainSB = UIStoryboard(name: "Main", bundle: nil)
+//                let mainSB = UIStoryboard(name: "Main", bundle: nil)
+//                
+//                let mapsVC = mainSB.instantiateViewControllerWithIdentifier("maps") as?
+//                UINavigationController
+//                
+//                self.navigationController?.presentViewController(mapsVC!, animated: true, completion: nil)
                 
-                let mapsVC = mainSB.instantiateViewControllerWithIdentifier("maps") as?
-                UINavigationController
-                
-                self.navigationController?.presentViewController(mapsVC!, animated: true, completion: nil)
+                print("registered")
                 
             } else {
                 

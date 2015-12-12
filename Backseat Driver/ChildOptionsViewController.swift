@@ -13,12 +13,13 @@ class ChildOptionsViewController: UIViewController {
     
     @IBAction func logoutpressed(sender: AnyObject) {
         
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        let childSB = UIStoryboard(name: "Child", bundle: nil)
         
-        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("Choice") as?
-        UINavigationController
+        let ChildLoginVC = childSB.instantiateViewControllerWithIdentifier("childlogin") as?
+        ChildLoginViewController
         
-        self.navigationController?.presentViewController(ChoiceVC!, animated: true, completion: nil)
+        self.navigationController?.presentViewController(ChildLoginVC!, animated: true, completion: nil)
+        
         
     }
     
