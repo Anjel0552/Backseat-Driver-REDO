@@ -13,6 +13,8 @@ import Parse
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate {
 
+    @IBOutlet weak var childChossen: UILabel! 
+        
     @IBOutlet weak var speedLabel: UILabel!
     
     override func viewDidAppear(animated: Bool) {
@@ -34,12 +36,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         
     }
     
-    @IBOutlet weak var myMapView: MKMapView!
+    @IBOutlet weak var myMapView: MKMapView! {
+    
+        didSet {
+            
+            myMapView.mapType = .Standard
+            myMapView.zoomEnabled = true
+            self.myMapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true);
+            self.myMapView.showAnnotations(self.myMapView.annotations, animated: true)
+
+        }
+        
+    }
     
     let lManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // need to ask for location
         lManager.requestWhenInUseAuthorization()
@@ -47,9 +61,42 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         lManager.delegate = self
         
         // Show pretty blue dot
-        myMapView.showsUserLocation = true
+        // myMapView.showsUserLocation = true
         
         lManager.startUpdatingLocation()
+        
+        
+        if let point = child?["location"] as? PFGeoPoint {
+            
+            // create annotation and add to map
+            
+            let coord = CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude)
+            
+            let annotation = MKPointAnnotation()
+            
+            annotation.coordinate = coord
+            
+            self.myMapView.addAnnotation(annotation)
+            
+        }
+        
+        guard let shit = child?["name"] as? String else { return }
+        
+        childChossen.text! = "\(shit)'s Location"
+        
+        func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            let userLoction: CLLocation = locations[0]
+            let latitude = userLoction.coordinate.latitude
+            let longitude = userLoction.coordinate.longitude
+            let latDelta: CLLocationDegrees = 0.05
+            let lonDelta: CLLocationDegrees = 0.05
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+            let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+            let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            self.myMapView.setRegion(region, animated: true)
+            self.myMapView.showsUserLocation = true
+            
+        }
         
     }
     
@@ -58,9 +105,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         didSet {
             
             mph = speed * 2.23694
-            print(speed)
+            print(mph)
             
-            // set hidden bsaed on mph
+            // set hidden based on mph
         }
         
     }
@@ -82,20 +129,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
             print(location.coordinate.latitude, location.coordinate.longitude)
             speed = location.speed
             
-            let point = PFGeoPoint(location: location)
-            
-            print(PFGeoPoint(location: location))
-            
         }
         
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        
-        print(error)
-        
-    }
-
+    
     
     @IBAction func pressedLogout(sender: AnyObject) {
         
@@ -112,25 +150,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         
     }
     
-    @IBAction func pressedSettings(sender: AnyObject) {
-        
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
-        
-        let settingsVC = mainSB.instantiateViewControllerWithIdentifier("settings") as?
-            SettingsViewController
-        
-        self.navigationController?.presentViewController(settingsVC!, animated: true, completion: nil)
-        
-    }
-    
     @IBAction func callButton(sender: UIButton) {
-        
-        //  guard let phoneNumber = numberField.text else { return }
         
         let url:NSURL = NSURL(string: "tel://9565458321")!
         UIApplication.sharedApplication().openURL(url)
         
-        //        print(phoneNumber)
     }
     
     @IBAction func messageButton(sender: AnyObject) {

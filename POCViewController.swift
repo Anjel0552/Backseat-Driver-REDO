@@ -33,10 +33,10 @@ class POCViewController: UIViewController {
         
         let childSB = UIStoryboard(name: "Child", bundle: nil)
         
-        let ChildLoginVC = childSB.instantiateViewControllerWithIdentifier("childlogin") as?
-        ChildLoginViewController
+        let ChildOptionVC = childSB.instantiateViewControllerWithIdentifier("drive") as?
+        ChildOptionsViewController
         
-        self.navigationController?.presentViewController(ChildLoginVC!, animated: true, completion: nil)
+        self.presentViewController(ChildOptionVC!, animated: true, completion: nil)
         
     }
     

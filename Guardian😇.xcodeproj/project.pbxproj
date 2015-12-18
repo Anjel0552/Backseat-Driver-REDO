@@ -13,7 +13,6 @@
 		370E0EC01C10A22700F5A89C /* Devil Breeze Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */; };
 		370E0EC11C10A22700F5A89C /* Devil Breeze Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */; };
 		370E0EC21C10A22700F5A89C /* Devil Breeze Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */; };
-		370E0EC81C13629900F5A89C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC71C13629900F5A89C /* SettingsViewController.swift */; };
 		370E0ECA1C1362F700F5A89C /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */; };
 		377637831C14D9E700A9537D /* ChildLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377637821C14D9E700A9537D /* ChildLoginViewController.swift */; };
 		3792F0321C16097700972525 /* ChildOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792F0311C16097700972525 /* ChildOptionsViewController.swift */; };
@@ -62,7 +61,6 @@
 		370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Demi.ttf"; sourceTree = "<group>"; };
 		370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Light.ttf"; sourceTree = "<group>"; };
 		370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Medium.ttf"; sourceTree = "<group>"; };
-		370E0EC71C13629900F5A89C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceViewController.swift; path = ../ChoiceViewController.swift; sourceTree = "<group>"; };
 		377637821C14D9E700A9537D /* ChildLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildLoginViewController.swift; sourceTree = "<group>"; };
 		3792F0311C16097700972525 /* ChildOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildOptionsViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 		3792F04E1C161A7B00972525 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3792F0501C161A9800972525 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		37ECB1F11C1B5E1400265C56 /* FamilyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyInfoViewController.swift; sourceTree = "<group>"; };
-		37FB6BF51C0CA993000EAFA7 /* Backseat Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backseat Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FB6BF51C0CA993000EAFA7 /* Guardian😇.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian😇.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		37FB6BFD1C0CA993000EAFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 				37FB6C0F1C0CF192000EAFA7 /* JoinViewController.swift */,
 				37FB6C0D1C0CF187000EAFA7 /* LoginViewController.swift */,
 				37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */,
-				370E0EC71C13629900F5A89C /* SettingsViewController.swift */,
 				37ECB1F11C1B5E1400265C56 /* FamilyInfoViewController.swift */,
 			);
 			name = Parent;
@@ -209,7 +206,7 @@
 		37FB6BF61C0CA993000EAFA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37FB6BF51C0CA993000EAFA7 /* Backseat Driver.app */,
+				37FB6BF51C0CA993000EAFA7 /* Guardian😇.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,9 +234,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37FB6BF41C0CA993000EAFA7 /* Backseat Driver */ = {
+		37FB6BF41C0CA993000EAFA7 /* Guardian😇 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37FB6C071C0CA993000EAFA7 /* Build configuration list for PBXNativeTarget "Backseat Driver" */;
+			buildConfigurationList = 37FB6C071C0CA993000EAFA7 /* Build configuration list for PBXNativeTarget "Guardian😇" */;
 			buildPhases = (
 				37FB6BF11C0CA993000EAFA7 /* Sources */,
 				37FB6BF21C0CA993000EAFA7 /* Frameworks */,
@@ -250,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = "Backseat Driver";
+			name = "Guardian😇";
 			productName = "Backseat Driver";
-			productReference = 37FB6BF51C0CA993000EAFA7 /* Backseat Driver.app */;
+			productReference = 37FB6BF51C0CA993000EAFA7 /* Guardian😇.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +267,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 37FB6BF01C0CA993000EAFA7 /* Build configuration list for PBXProject "Backseat Driver" */;
+			buildConfigurationList = 37FB6BF01C0CA993000EAFA7 /* Build configuration list for PBXProject "Guardian😇" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -283,7 +280,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37FB6BF41C0CA993000EAFA7 /* Backseat Driver */,
+				37FB6BF41C0CA993000EAFA7 /* Guardian😇 */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +315,6 @@
 				370E0ECA1C1362F700F5A89C /* ChoiceViewController.swift in Sources */,
 				37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */,
 				377637831C14D9E700A9537D /* ChildLoginViewController.swift in Sources */,
-				370E0EC81C13629900F5A89C /* SettingsViewController.swift in Sources */,
 				3792F0321C16097700972525 /* ChildOptionsViewController.swift in Sources */,
 				37ECB1F21C1B5E1400265C56 /* FamilyInfoViewController.swift in Sources */,
 				370DA0C11C14D63600DF539A /* POCViewController.swift in Sources */,
@@ -436,7 +432,7 @@
 				INFOPLIST_FILE = "Backseat Driver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anjelvillafranco.Backseat-Driver";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Guardian😇";
 			};
 			name = Debug;
 		};
@@ -448,14 +444,14 @@
 				INFOPLIST_FILE = "Backseat Driver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anjelvillafranco.Backseat-Driver";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Guardian😇";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37FB6BF01C0CA993000EAFA7 /* Build configuration list for PBXProject "Backseat Driver" */ = {
+		37FB6BF01C0CA993000EAFA7 /* Build configuration list for PBXProject "Guardian😇" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37FB6C051C0CA993000EAFA7 /* Debug */,
@@ -464,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37FB6C071C0CA993000EAFA7 /* Build configuration list for PBXNativeTarget "Backseat Driver" */ = {
+		37FB6C071C0CA993000EAFA7 /* Build configuration list for PBXNativeTarget "Guardian😇" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37FB6C081C0CA993000EAFA7 /* Debug */,

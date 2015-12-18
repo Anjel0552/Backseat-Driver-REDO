@@ -14,7 +14,7 @@
         <!--Choice View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ChoiceViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ChoiceViewController" customModule="Guardian_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,7 +41,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GhS-Ci-RnO" kind="show" id="EVB-yO-BrA"/>
+                                    <segue destination="0yo-Hb-1VJ" kind="show" id="wl7-Ng-HEh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTq-6U-zbZ">
@@ -68,12 +68,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191.5" y="359.5"/>
+            <point key="canvasLocation" x="1291.5" y="359.5"/>
         </scene>
         <!--Family Info View Controller-->
         <scene sceneID="vsq-Ep-zUF">
             <objects>
-                <viewController id="HFb-9y-f9s" customClass="FamilyInfoViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HFb-9y-f9s" customClass="FamilyInfoViewController" customModule="Guardian_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d1b-v9-UWT"/>
                         <viewControllerLayoutGuide type="bottom" id="Vfb-PP-dyy"/>
@@ -89,6 +89,9 @@
                                 <rect key="frame" x="59" y="100" width="178" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HFb-9y-f9s" id="Edo-L4-NKO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Family Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFy-rm-B7T">
                                 <rect key="frame" x="59" y="65" width="116" height="21"/>
@@ -106,6 +109,9 @@
                                 <rect key="frame" x="59" y="167" width="178" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HFb-9y-f9s" id="qdJ-Yp-oaC"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parent Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-j4-8hx">
                                 <rect key="frame" x="59" y="205" width="194" height="25"/>
@@ -117,17 +123,23 @@
                                 <rect key="frame" x="59" y="238" width="178" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HFb-9y-f9s" id="3wG-yb-Krm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Child's Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfA-bt-R9q">
                                 <rect key="frame" x="59" y="312" width="178" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HFb-9y-f9s" id="Mn6-7L-MNe"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnm-9F-tt4">
                                 <rect key="frame" x="97" y="350" width="180" height="52"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="29"/>
                                 <state key="normal" title="Complete">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pressedComplete:" destination="HFb-9y-f9s" eventType="touchUpInside" id="FRP-AH-wsq"/>
@@ -157,7 +169,7 @@
         <!--Login View Controller-->
         <scene sceneID="wqj-Nd-edy">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="0yo-Hb-1VJ" customClass="LoginViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="0yo-Hb-1VJ" customClass="LoginViewController" customModule="Guardian_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tZ6-l0-GEe"/>
                         <viewControllerLayoutGuide type="bottom" id="ybN-rf-IA2"/>
@@ -174,24 +186,19 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-6t-pPY">
-                                <rect key="frame" x="20" y="421" width="143" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Forgot passcode?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="lPH-Ru-uwi">
                                 <rect key="frame" x="66" y="64" width="240" height="57"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVh-kx-cUf">
                                 <rect key="frame" x="144" y="358" width="84" height="55"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="Touch-IDred">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButtonPressed:" destination="0yo-Hb-1VJ" eventType="touchUpInside" id="xK9-KH-2ui"/>
                                     <action selector="touchID:" destination="0yo-Hb-1VJ" eventType="touchUpInside" id="fto-lI-BuA"/>
+                                    <action selector="touchId:" destination="0yo-Hb-1VJ" eventType="touchUpInside" id="laB-mx-keO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXW-M8-JeV">
@@ -212,14 +219,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ced-kG-69Z">
-                                <rect key="frame" x="146" y="300" width="81" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="LOGIN">
+                                <rect key="frame" x="146" y="300" width="81" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="28"/>
+                                <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="0yo-Hb-1VJ" eventType="touchUpInside" id="R81-eR-c3C"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-6t-pPY">
+                                <rect key="frame" x="116" y="421" width="143" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Forgot passcode?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.30980392159999998" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -232,12 +246,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZY-lr-pZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.5" y="1188.5"/>
+            <point key="canvasLocation" x="1920.5" y="359.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Djz-bT-yxL">
             <objects>
-                <viewController storyboardIdentifier="POC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GhS-Ci-RnO" customClass="POCViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="POC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GhS-Ci-RnO" customClass="POCViewController" customModule="Guardian_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HYR-nj-kJD"/>
                         <viewControllerLayoutGuide type="bottom" id="Fc2-IL-ag9"/>
@@ -249,9 +263,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="yh2-4f-3Xa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kWh-GW-ORs">
-                                <rect key="frame" x="67" y="64" width="240" height="226"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-6d-qU5">
                                 <rect key="frame" x="51" y="510" width="273" height="73"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,7 +271,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="childPressed:" destination="GhS-Ci-RnO" eventType="touchUpInside" id="hfm-Br-YcI"/>
+                                    <action selector="childPressed:" destination="GhS-Ci-RnO" eventType="touchUpInside" id="ZPv-w9-Jvd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-ZA-t0f">
@@ -271,7 +282,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0yo-Hb-1VJ" kind="show" id="gQN-jo-BGP"/>
+                                    <segue destination="EsD-2p-oiy" kind="show" id="Ws9-IC-YDT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ki-8X-qIJ">
@@ -286,6 +297,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kWh-GW-ORs">
+                                <rect key="frame" x="67" y="64" width="240" height="226"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -293,12 +307,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofN-pw-jnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.5" y="359.5"/>
+            <point key="canvasLocation" x="1920.5" y="1188.5"/>
         </scene>
         <!--Join View Controller-->
         <scene sceneID="VhC-C1-kzT">
             <objects>
-                <viewController id="HFK-UG-Ymz" customClass="JoinViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HFK-UG-Ymz" customClass="JoinViewController" customModule="Guardian_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mY9-iq-7KK"/>
                         <viewControllerLayoutGuide type="bottom" id="RSY-uF-SdW"/>
@@ -331,12 +345,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MAKE A USERNAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a0Q-8s-ncg">
                                 <rect key="frame" x="18" y="147" width="337" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.48160367398648651" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER YOUR EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xG-bL-6GD">
                                 <rect key="frame" x="18" y="201" width="337" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.49303209459459457" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
@@ -355,6 +371,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER PASSCODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-iC-zzc">
                                 <rect key="frame" x="18" y="257" width="337" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.458984375" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -397,12 +414,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ta-Mj-Srv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791.5" y="1188.5"/>
+            <point key="canvasLocation" x="660.5" y="1188.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="JVY-7i-GUy">
             <objects>
-                <viewController storyboardIdentifier="Maps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TsS-N4-RmU" customClass="MapViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Maps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TsS-N4-RmU" customClass="MapViewController" customModule="Guardian_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Rq-cm-gIn"/>
                         <viewControllerLayoutGuide type="bottom" id="ioo-q2-H52"/>
@@ -415,7 +432,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-q4-mGl">
-                                <rect key="frame" x="0.0" y="-4" width="375" height="542"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="474"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZID-nP-Wyp">
                                 <rect key="frame" x="230" y="539" width="145" height="58"/>
@@ -424,6 +441,9 @@
                                 <state key="normal" title="Send Points">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendPoints:" destination="TsS-N4-RmU" eventType="touchUpInside" id="ERw-eB-UVu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-2l-pz5">
                                 <rect key="frame" x="139" y="542" width="64" height="51"/>
@@ -459,52 +479,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-ub-u8L">
+                                <rect key="frame" x="48" y="72" width="279" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.35562711148648651" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568627450979" green="0.80392156862745101" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="s0M-Zx-5He">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="PtY-SB-isP">
-                            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="pressedLogout:" destination="TsS-N4-RmU" id="3pB-uh-KCL"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="q1O-or-7bx">
-                            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="pressedSettings:" destination="TsS-N4-RmU" id="B2P-UX-3Uv"/>
-                                <segue destination="n9w-u4-abG" kind="show" id="o5b-aL-cDh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="childChossen" destination="nKY-ub-u8L" id="Kg6-JK-QxP"/>
                         <outlet property="myMapView" destination="2qx-q4-mGl" id="FgA-9A-Kkl"/>
                         <outlet property="speedLabel" destination="b8g-2l-pz5" id="fQO-MG-m0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LcJ-Vt-meK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175.5" y="1997.5"/>
-        </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="lnc-Vv-QEE">
-            <objects>
-                <viewController storyboardIdentifier="settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n9w-u4-abG" customClass="SettingsViewController" customModule="Backseat_Driver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H9R-MM-9Ml"/>
-                        <viewControllerLayoutGuide type="bottom" id="hde-V1-Nbu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AAe-Ma-z2G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgK-88-Ihw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1616.5" y="1997.5"/>
+            <point key="canvasLocation" x="2477.5" y="2103.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H42-v8-jMR">
@@ -523,7 +524,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RM4-xw-k3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666.5" y="1997.5"/>
+            <point key="canvasLocation" x="1920.5" y="2103.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q3X-Pb-coR">
@@ -542,7 +543,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKd-1e-88g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658.5" y="359.5"/>
+            <point key="canvasLocation" x="660.5" y="359.5"/>
         </scene>
     </scenes>
     <resources>

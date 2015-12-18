@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "37FB6BF41C0CA993000EAFA7"
-               BuildableName = "Backseat Driver.app"
-               BlueprintName = "Backseat Driver"
-               ReferencedContainer = "container:Backseat Driver.xcodeproj">
+               BuildableName = "Guardian&#x1f607;.app"
+               BlueprintName = "Guardian&#x1f607;"
+               ReferencedContainer = "container:Guardian&#x1f607;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37FB6BF41C0CA993000EAFA7"
-            BuildableName = "Backseat Driver.app"
-            BlueprintName = "Backseat Driver"
-            ReferencedContainer = "container:Backseat Driver.xcodeproj">
+            BuildableName = "Guardian&#x1f607;.app"
+            BlueprintName = "Guardian&#x1f607;"
+            ReferencedContainer = "container:Guardian&#x1f607;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37FB6BF41C0CA993000EAFA7"
-            BuildableName = "Backseat Driver.app"
-            BlueprintName = "Backseat Driver"
-            ReferencedContainer = "container:Backseat Driver.xcodeproj">
+            BuildableName = "Guardian&#x1f607;.app"
+            BlueprintName = "Guardian&#x1f607;"
+            ReferencedContainer = "container:Guardian&#x1f607;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37FB6BF41C0CA993000EAFA7"
-            BuildableName = "Backseat Driver.app"
-            BlueprintName = "Backseat Driver"
-            ReferencedContainer = "container:Backseat Driver.xcodeproj">
+            BuildableName = "Guardian&#x1f607;.app"
+            BlueprintName = "Guardian&#x1f607;"
+            ReferencedContainer = "container:Guardian&#x1f607;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

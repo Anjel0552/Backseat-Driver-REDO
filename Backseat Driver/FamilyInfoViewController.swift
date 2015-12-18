@@ -9,9 +9,14 @@
 import UIKit
 import Parse
 
-class FamilyInfoViewController: UIViewController {
+var parent: PFObject?
+var child: PFObject?
+//let kidName = String()
+
+class FamilyInfoViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidAppear(animated: Bool) {
+        
         let nav = self.navigationController?.navigationBar
         
         nav?.tintColor = UIColor.whiteColor()
@@ -37,38 +42,50 @@ class FamilyInfoViewController: UIViewController {
     @IBOutlet weak var parentPhoneNumber: UITextField!
     
     @IBOutlet weak var childPhoneNumber: UITextField!
-    
    
     @IBAction func pressedComplete(sender: AnyObject) {
-   
     
-        let parent: PFObject = PFObject(className: "Parent")
-            
-            parent["childPhone"] = childPhoneNumber.text
-            
-            parent["familyname"] = familyName.text
+        parent = PFObject(className: "Parent")
         
-        let child: PFObject = PFObject(className: "Child")
+        parent?["childPhone"] = childPhoneNumber.text!
         
-            child["parentPhone"] = parentPhoneNumber.text
+        parent?["familyname"] = familyName.text!
         
-            child["name"] = childOneName.text
+        parent?["user"] = PFUser.currentUser()
         
-            child["parent"] = parent
+        child = PFObject(className: "Child")
+        
+        child?["parentPhone"] = parentPhoneNumber.text!
+        
+        child?["name"] = childOneName.text!
+        
+        child?["parent"] = parent
+        
+        parent?.saveInBackgroundWithBlock({ (success, error) -> Void in
             
-        parent.saveInBackgroundWithBlock({ (success, error) -> Void in
             
-            
-            child.saveInBackgroundWithBlock({ (success, error) -> Void in
+            child?.saveInBackgroundWithBlock({ (success, error) -> Void in
                 
-                print("both saved")
-                
+                if (success) {
+                    
+                    print("Saved Data")
+                    
+                    let mainSB = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    let MapsVC = mainSB.instantiateViewControllerWithIdentifier("MAP") as?
+                    UINavigationController
+                    
+                    self.navigationController?.presentViewController(MapsVC!, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    print("error")
+                    
+                }
             })
             
         })
-        
-        
-
+   
     }
 
     
