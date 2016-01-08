@@ -39,8 +39,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
-    
-    
     @IBAction func loginButtonPressed(sender: UIButton) {
         
         
@@ -107,8 +105,8 @@ class LoginViewController: UIViewController {
     func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
                     // Dispose of any resources that can be recreated.
+
                 }
-                
             }
         }
     }

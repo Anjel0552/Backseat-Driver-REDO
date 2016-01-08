@@ -23,7 +23,9 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
     
     @IBAction func callParent(sender: AnyObject) {
         
-        let url:NSURL = NSURL(string: "tel://7705805597")!
+        guard let parentNumber = child?["parentPhone"] as? String else { return }
+        
+        let url:NSURL = NSURL(string: "tel://\(parentNumber)")!
         UIApplication.sharedApplication().openURL(url)
         
     }
@@ -73,13 +75,6 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
         
     }
     
-    //    func showAlertController(message: String) {
-    //        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
-    //        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-    //        presentViewController(alertController, animated: true, completion: nil)
-    //    }
-    //
-    
     var speed: CLLocationSpeed! {
         
         didSet {
@@ -113,7 +108,7 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
             child?["location"] = point
             child?.saveInBackground()
             
-            print(point) 
+            print("saved")
             
         }
         
@@ -128,15 +123,15 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
-    
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        
-        if motion == .MotionShake {
-            
-            self.mySpeedTitle.text = "Shaken, not stirred"
-            
-        }
-    }
+
+//    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+//        
+//        if motion == .MotionShake {
+//            
+//            self.mySpeedTitle.text = "Shaken, not stirred"
+//            
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -54,7 +54,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // need to ask for location
         lManager.requestWhenInUseAuthorization()
         
@@ -64,7 +63,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         // myMapView.showsUserLocation = true
         
         lManager.startUpdatingLocation()
-        
         
         if let point = child?["location"] as? PFGeoPoint {
             
@@ -107,6 +105,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
             mph = speed * 2.23694
             print(mph)
             
+            if speed < 75 {
+                
+                print("Slow the FUCK DOWN")
+                
+            }
             // set hidden based on mph
         }
         
@@ -163,12 +166,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
     
     @IBAction func messageButton(sender: AnyObject) {
         
-        guard let childNumber1 = parent?["childPhone"] as? String else { return }
+        guard let childNumberSMS = parent?["childPhone"] as? String else { return }
         
         let messageVC = MFMessageComposeViewController()
         
         messageVC.body = ""
-        messageVC.recipients = ["\(childNumber1)"]
+        messageVC.recipients = ["\(childNumberSMS)"]
         messageVC.messageComposeDelegate = self
         
         self.presentViewController(messageVC, animated: false, completion: nil)

@@ -11,6 +11,7 @@ import UIKit
 class POCViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
+        
         let nav = self.navigationController?.navigationBar
         
         nav?.tintColor = UIColor.whiteColor()

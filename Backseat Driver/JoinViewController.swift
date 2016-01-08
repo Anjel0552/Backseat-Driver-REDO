@@ -34,13 +34,6 @@ class JoinViewController: UIViewController {
             
             if error == nil  {
                 
-//                let mainSB = UIStoryboard(name: "Main", bundle: nil)
-//                
-//                let mapsVC = mainSB.instantiateViewControllerWithIdentifier("maps") as?
-//                UINavigationController
-//                
-//                self.navigationController?.presentViewController(mapsVC!, animated: true, completion: nil)
-                
                 print("registered")
                 
             } else {
