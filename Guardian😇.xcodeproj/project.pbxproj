@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		370DA0C11C14D63600DF539A /* POCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DA0C01C14D63600DF539A /* POCViewController.swift */; };
-		370E0EBE1C10A22700F5A89C /* Devil Breeze Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EB91C10A22700F5A89C /* Devil Breeze Bold.ttf */; };
-		370E0EBF1C10A22700F5A89C /* Devil Breeze Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBA1C10A22700F5A89C /* Devil Breeze Book.ttf */; };
-		370E0EC01C10A22700F5A89C /* Devil Breeze Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */; };
-		370E0EC11C10A22700F5A89C /* Devil Breeze Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */; };
-		370E0EC21C10A22700F5A89C /* Devil Breeze Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */; };
 		370E0ECA1C1362F700F5A89C /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */; };
+		3722ADA01C3498AB00F0B075 /* built titling bd it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD961C3498AB00F0B075 /* built titling bd it.ttf */; };
+		3722ADA11C3498AB00F0B075 /* built titling bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD971C3498AB00F0B075 /* built titling bd.ttf */; };
+		3722ADA21C3498AB00F0B075 /* built titling el it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD981C3498AB00F0B075 /* built titling el it.ttf */; };
+		3722ADA31C3498AB00F0B075 /* built titling el.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD991C3498AB00F0B075 /* built titling el.ttf */; };
+		3722ADA41C3498AB00F0B075 /* built titling lt it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9A1C3498AB00F0B075 /* built titling lt it.ttf */; };
+		3722ADA51C3498AB00F0B075 /* built titling lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9B1C3498AB00F0B075 /* built titling lt.ttf */; };
+		3722ADA61C3498AB00F0B075 /* built titling rg it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9C1C3498AB00F0B075 /* built titling rg it.ttf */; };
+		3722ADA71C3498AB00F0B075 /* built titling rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9D1C3498AB00F0B075 /* built titling rg.ttf */; };
+		3722ADA81C3498AB00F0B075 /* built titling sb it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9E1C3498AB00F0B075 /* built titling sb it.ttf */; };
+		3722ADA91C3498AB00F0B075 /* built titling sb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9F1C3498AB00F0B075 /* built titling sb.ttf */; };
+		3722ADAB1C3498CC00F0B075 /* HighVoltage.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722ADAA1C3498CC00F0B075 /* HighVoltage.ttf */; };
+		3722ADAD1C34A17500F0B075 /* Muro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3722ADAC1C34A17500F0B075 /* Muro.otf */; };
 		377637831C14D9E700A9537D /* ChildLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377637821C14D9E700A9537D /* ChildLoginViewController.swift */; };
 		3792F0321C16097700972525 /* ChildOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792F0311C16097700972525 /* ChildOptionsViewController.swift */; };
 		3792F0361C16156600972525 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792F0341C16156600972525 /* Bolts.framework */; };
@@ -56,12 +63,19 @@
 
 /* Begin PBXFileReference section */
 		370DA0C01C14D63600DF539A /* POCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = POCViewController.swift; path = ../POCViewController.swift; sourceTree = "<group>"; };
-		370E0EB91C10A22700F5A89C /* Devil Breeze Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Bold.ttf"; sourceTree = "<group>"; };
-		370E0EBA1C10A22700F5A89C /* Devil Breeze Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Book.ttf"; sourceTree = "<group>"; };
-		370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Demi.ttf"; sourceTree = "<group>"; };
-		370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Light.ttf"; sourceTree = "<group>"; };
-		370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Devil Breeze Medium.ttf"; sourceTree = "<group>"; };
 		370E0EC91C1362F700F5A89C /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceViewController.swift; path = ../ChoiceViewController.swift; sourceTree = "<group>"; };
+		3722AD961C3498AB00F0B075 /* built titling bd it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling bd it.ttf"; sourceTree = "<group>"; };
+		3722AD971C3498AB00F0B075 /* built titling bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling bd.ttf"; sourceTree = "<group>"; };
+		3722AD981C3498AB00F0B075 /* built titling el it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling el it.ttf"; sourceTree = "<group>"; };
+		3722AD991C3498AB00F0B075 /* built titling el.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling el.ttf"; sourceTree = "<group>"; };
+		3722AD9A1C3498AB00F0B075 /* built titling lt it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling lt it.ttf"; sourceTree = "<group>"; };
+		3722AD9B1C3498AB00F0B075 /* built titling lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling lt.ttf"; sourceTree = "<group>"; };
+		3722AD9C1C3498AB00F0B075 /* built titling rg it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling rg it.ttf"; sourceTree = "<group>"; };
+		3722AD9D1C3498AB00F0B075 /* built titling rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling rg.ttf"; sourceTree = "<group>"; };
+		3722AD9E1C3498AB00F0B075 /* built titling sb it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling sb it.ttf"; sourceTree = "<group>"; };
+		3722AD9F1C3498AB00F0B075 /* built titling sb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling sb.ttf"; sourceTree = "<group>"; };
+		3722ADAA1C3498CC00F0B075 /* HighVoltage.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HighVoltage.ttf; sourceTree = "<group>"; };
+		3722ADAC1C34A17500F0B075 /* Muro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muro.otf; sourceTree = "<group>"; };
 		377637821C14D9E700A9537D /* ChildLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildLoginViewController.swift; sourceTree = "<group>"; };
 		3792F0311C16097700972525 /* ChildOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildOptionsViewController.swift; sourceTree = "<group>"; };
 		3792F0341C16156600972525 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../_resources/Frameworks/Parse/Bolts.framework; sourceTree = "<group>"; };
@@ -130,11 +144,18 @@
 		370E0EB81C10A1FF00F5A89C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				370E0EB91C10A22700F5A89C /* Devil Breeze Bold.ttf */,
-				370E0EBA1C10A22700F5A89C /* Devil Breeze Book.ttf */,
-				370E0EBB1C10A22700F5A89C /* Devil Breeze Demi.ttf */,
-				370E0EBC1C10A22700F5A89C /* Devil Breeze Light.ttf */,
-				370E0EBD1C10A22700F5A89C /* Devil Breeze Medium.ttf */,
+				3722ADAA1C3498CC00F0B075 /* HighVoltage.ttf */,
+				3722AD961C3498AB00F0B075 /* built titling bd it.ttf */,
+				3722AD971C3498AB00F0B075 /* built titling bd.ttf */,
+				3722AD981C3498AB00F0B075 /* built titling el it.ttf */,
+				3722AD991C3498AB00F0B075 /* built titling el.ttf */,
+				3722AD9A1C3498AB00F0B075 /* built titling lt it.ttf */,
+				3722AD9B1C3498AB00F0B075 /* built titling lt.ttf */,
+				3722AD9C1C3498AB00F0B075 /* built titling rg it.ttf */,
+				3722AD9D1C3498AB00F0B075 /* built titling rg.ttf */,
+				3722AD9E1C3498AB00F0B075 /* built titling sb it.ttf */,
+				3722AD9F1C3498AB00F0B075 /* built titling sb.ttf */,
+				3722ADAC1C34A17500F0B075 /* Muro.otf */,
 			);
 			name = Resources;
 			path = "Backseat Driver";
@@ -290,15 +311,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3722ADA61C3498AB00F0B075 /* built titling rg it.ttf in Resources */,
 				37FB6C031C0CA993000EAFA7 /* LaunchScreen.storyboard in Resources */,
-				370E0EC01C10A22700F5A89C /* Devil Breeze Demi.ttf in Resources */,
+				3722ADAD1C34A17500F0B075 /* Muro.otf in Resources */,
+				3722ADA41C3498AB00F0B075 /* built titling lt it.ttf in Resources */,
+				3722ADA11C3498AB00F0B075 /* built titling bd.ttf in Resources */,
+				3722ADA51C3498AB00F0B075 /* built titling lt.ttf in Resources */,
+				3722ADA31C3498AB00F0B075 /* built titling el.ttf in Resources */,
 				37FB6C001C0CA993000EAFA7 /* Assets.xcassets in Resources */,
-				370E0EC11C10A22700F5A89C /* Devil Breeze Light.ttf in Resources */,
-				370E0EC21C10A22700F5A89C /* Devil Breeze Medium.ttf in Resources */,
-				370E0EBE1C10A22700F5A89C /* Devil Breeze Bold.ttf in Resources */,
 				37FB6BFE1C0CA993000EAFA7 /* Main.storyboard in Resources */,
+				3722ADA21C3498AB00F0B075 /* built titling el it.ttf in Resources */,
+				3722ADAB1C3498CC00F0B075 /* HighVoltage.ttf in Resources */,
 				37FB6C0C1C0CB825000EAFA7 /* Child.storyboard in Resources */,
-				370E0EBF1C10A22700F5A89C /* Devil Breeze Book.ttf in Resources */,
+				3722ADA81C3498AB00F0B075 /* built titling sb it.ttf in Resources */,
+				3722ADA71C3498AB00F0B075 /* built titling rg.ttf in Resources */,
+				3722ADA01C3498AB00F0B075 /* built titling bd it.ttf in Resources */,
+				3722ADA91C3498AB00F0B075 /* built titling sb.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

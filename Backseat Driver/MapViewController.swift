@@ -80,9 +80,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
             
         }
         
-        guard let shit = child?["name"] as? String else { return }
+        guard let child1 = child?["name"] as? String else { return }
         
-        childChossen.text! = "\(shit)'s Location"
+        childChossen.text! = "\(child1)'s Location"
         
         func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             let userLoction: CLLocation = locations[0]
@@ -152,17 +152,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
     
     @IBAction func callButton(sender: UIButton) {
         
-        let url:NSURL = NSURL(string: "tel://9565458321")!
+        guard let childNumber = parent?["childPhone"] as? String else { return }
+        
+        let url:NSURL = NSURL(string: "tel://\(childNumber)")!
         UIApplication.sharedApplication().openURL(url)
+        
+        print(childNumber)
         
     }
     
     @IBAction func messageButton(sender: AnyObject) {
         
+        guard let childNumber1 = parent?["childPhone"] as? String else { return }
+        
         let messageVC = MFMessageComposeViewController()
         
         messageVC.body = ""
-        messageVC.recipients = ["9565458321"]
+        messageVC.recipients = ["\(childNumber1)"]
         messageVC.messageComposeDelegate = self
         
         self.presentViewController(messageVC, animated: false, completion: nil)
