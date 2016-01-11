@@ -102,7 +102,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         
         didSet {
             
-            mph = speed * 2.23694
+//            mph = speed * 2.23694
             print(mph)
             
             if speed < 75 {
