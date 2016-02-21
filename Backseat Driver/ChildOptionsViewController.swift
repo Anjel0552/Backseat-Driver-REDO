@@ -35,19 +35,20 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
     
     @IBAction func logoutpressed(sender: AnyObject) {
         
+        PFUser.logOut()
+        
         let mainSB = UIStoryboard(name: "Main", bundle: nil)
         
-        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("Choice") as?
-        UINavigationController
+        let ChoiceVC = mainSB.instantiateViewControllerWithIdentifier("welcome") as?
+        ChoiceViewController
         
-        self.navigationController?.presentViewController(ChoiceVC!, animated: true, completion: nil)
+        self.presentViewController(ChoiceVC!, animated: true, completion: nil)
         
         print("Logged Out")
+        
     }
     
     let lManager = CLLocationManager()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +109,7 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
             child?["location"] = point
             child?.saveInBackground()
             
-            print("saved")
+            print("GeoPoint Saved")
             
         }
         
@@ -123,15 +124,6 @@ class ChildOptionsViewController: UIViewController, CLLocationManagerDelegate, U
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
-
-//    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-//        
-//        if motion == .MotionShake {
-//            
-//            self.mySpeedTitle.text = "Shaken, not stirred"
-//            
-//        }
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

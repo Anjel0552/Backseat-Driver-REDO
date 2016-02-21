@@ -21,7 +21,6 @@
 		3722ADA91C3498AB00F0B075 /* built titling sb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722AD9F1C3498AB00F0B075 /* built titling sb.ttf */; };
 		3722ADAB1C3498CC00F0B075 /* HighVoltage.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3722ADAA1C3498CC00F0B075 /* HighVoltage.ttf */; };
 		3722ADAD1C34A17500F0B075 /* Muro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3722ADAC1C34A17500F0B075 /* Muro.otf */; };
-		377637831C14D9E700A9537D /* ChildLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377637821C14D9E700A9537D /* ChildLoginViewController.swift */; };
 		3792F0321C16097700972525 /* ChildOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792F0311C16097700972525 /* ChildOptionsViewController.swift */; };
 		3792F0361C16156600972525 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792F0341C16156600972525 /* Bolts.framework */; };
 		3792F0371C16156600972525 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792F0351C16156600972525 /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -38,6 +37,8 @@
 		3792F04F1C161A7B00972525 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792F04E1C161A7B00972525 /* SystemConfiguration.framework */; };
 		3792F0511C161A9800972525 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792F0501C161A9800972525 /* libz.tbd */; };
 		37ECB1F21C1B5E1400265C56 /* FamilyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECB1F11C1B5E1400265C56 /* FamilyInfoViewController.swift */; };
+		37F4DE7C1C72ABCF000BB4AD /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F4DE7A1C72ABCF000BB4AD /* Fabric.framework */; };
+		37F4DE7D1C72ABCF000BB4AD /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F4DE7B1C72ABCF000BB4AD /* Crashlytics.framework */; };
 		37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */; };
 		37FB6BFB1C0CA993000EAFA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */; };
 		37FB6BFE1C0CA993000EAFA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB6BFC1C0CA993000EAFA7 /* Main.storyboard */; };
@@ -76,7 +77,6 @@
 		3722AD9F1C3498AB00F0B075 /* built titling sb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "built titling sb.ttf"; sourceTree = "<group>"; };
 		3722ADAA1C3498CC00F0B075 /* HighVoltage.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HighVoltage.ttf; sourceTree = "<group>"; };
 		3722ADAC1C34A17500F0B075 /* Muro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muro.otf; sourceTree = "<group>"; };
-		377637821C14D9E700A9537D /* ChildLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildLoginViewController.swift; sourceTree = "<group>"; };
 		3792F0311C16097700972525 /* ChildOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildOptionsViewController.swift; sourceTree = "<group>"; };
 		3792F0341C16156600972525 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../_resources/Frameworks/Parse/Bolts.framework; sourceTree = "<group>"; };
 		3792F0351C16156600972525 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../_resources/Frameworks/Parse/Parse.framework; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		3792F04E1C161A7B00972525 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3792F0501C161A9800972525 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		37ECB1F11C1B5E1400265C56 /* FamilyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyInfoViewController.swift; sourceTree = "<group>"; };
+		37F4DE7A1C72ABCF000BB4AD /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		37F4DE7B1C72ABCF000BB4AD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		37FB6BF51C0CA993000EAFA7 /* Guardian😇.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guardian😇.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB6BF81C0CA993000EAFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FB6BFA1C0CA993000EAFA7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +122,9 @@
 				3792F0431C161A3700972525 /* CFNetwork.framework in Frameworks */,
 				3792F0411C161A3100972525 /* AudioToolbox.framework in Frameworks */,
 				3792F03F1C161A0300972525 /* CoreAudio.framework in Frameworks */,
+				37F4DE7D1C72ABCF000BB4AD /* Crashlytics.framework in Frameworks */,
 				3792F03C1C1619F500972525 /* libsqlite3.0.tbd in Frameworks */,
+				37F4DE7C1C72ABCF000BB4AD /* Fabric.framework in Frameworks */,
 				3792F03D1C1619F600972525 /* libsqlite3.tbd in Frameworks */,
 				3792F0371C16156600972525 /* Parse.framework in Frameworks */,
 				3792F0361C16156600972525 /* Bolts.framework in Frameworks */,
@@ -174,6 +178,8 @@
 		3792F0331C1614E000972525 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37F4DE7A1C72ABCF000BB4AD /* Fabric.framework */,
+				37F4DE7B1C72ABCF000BB4AD /* Crashlytics.framework */,
 				3792F0501C161A9800972525 /* libz.tbd */,
 				3792F04E1C161A7B00972525 /* SystemConfiguration.framework */,
 				3792F04C1C161A6E00972525 /* StoreKit.framework */,
@@ -206,7 +212,6 @@
 		3792F0391C1615E500972525 /* Child */ = {
 			isa = PBXGroup;
 			children = (
-				377637821C14D9E700A9537D /* ChildLoginViewController.swift */,
 				3792F0311C16097700972525 /* ChildOptionsViewController.swift */,
 			);
 			name = Child;
@@ -263,6 +268,7 @@
 				37FB6BF21C0CA993000EAFA7 /* Frameworks */,
 				37FB6BF31C0CA993000EAFA7 /* Resources */,
 				37FB6C201C0D25DE000EAFA7 /* Embed App Extensions */,
+				37F4DE791C72ABAC000BB4AD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -332,6 +338,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37F4DE791C72ABAC000BB4AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 4d8f4e67aa28ca80164a3a75a2cc173aecf5fcd5 aca638b04e94fb268f75dea502d3172da0e10083e0eb11eb26186f6a6ae253ac\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37FB6BF11C0CA993000EAFA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -342,7 +364,6 @@
 				37FB6C101C0CF192000EAFA7 /* JoinViewController.swift in Sources */,
 				370E0ECA1C1362F700F5A89C /* ChoiceViewController.swift in Sources */,
 				37FB6BF91C0CA993000EAFA7 /* AppDelegate.swift in Sources */,
-				377637831C14D9E700A9537D /* ChildLoginViewController.swift in Sources */,
 				3792F0321C16097700972525 /* ChildOptionsViewController.swift in Sources */,
 				37ECB1F21C1B5E1400265C56 /* FamilyInfoViewController.swift in Sources */,
 				370DA0C11C14D63600DF539A /* POCViewController.swift in Sources */,
@@ -456,7 +477,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "/Users/Anjel/_resources/Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/Anjel/_resources/Frameworks/**",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Backseat Driver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anjelvillafranco.Backseat-Driver";
@@ -468,7 +492,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "/Users/Anjel/_resources/Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/Anjel/_resources/Frameworks/**",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Backseat Driver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anjelvillafranco.Backseat-Driver";

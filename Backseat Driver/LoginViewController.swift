@@ -67,11 +67,12 @@ class LoginViewController: UIViewController {
                             if let foundChild = objects?.first {
                                 
                                 child = foundChild
-                                print(foundChild)
+                                
+                                print("the child\(foundChild) has been found")
                                 
                                 kidName = child!["name"] as? String
                                 
-                                print(kidName)
+                                print("what's up Homie!!\(kidName)")
                                 
                             }
                             

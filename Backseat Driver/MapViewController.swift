@@ -8,10 +8,10 @@
 
 import UIKit
 import MapKit
-import MessageUI
 import Parse
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate {
+
+class MapViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var childChossen: UILabel! 
         
@@ -36,23 +36,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         
     }
     
-    @IBOutlet weak var myMapView: MKMapView! {
-    
-        didSet {
-            
-            myMapView.mapType = .Standard
-            myMapView.zoomEnabled = true
-            self.myMapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true);
-            self.myMapView.showAnnotations(self.myMapView.annotations, animated: true)
-
-        }
-        
-    }
+    @IBOutlet weak var myMapView: MKMapView!
     
     let lManager = CLLocationManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PFGeoPoint.geoPointForCurrentLocationInBackground {
+            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
+            if error == nil {
+                
+                print("this shit is working!")
+                
+            }
+        }
         
         // need to ask for location
         lManager.requestWhenInUseAuthorization()
@@ -65,7 +63,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         lManager.startUpdatingLocation()
         
         if let point = child?["location"] as? PFGeoPoint {
+        
             
+
             // create annotation and add to map
             
             let coord = CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude)
@@ -82,34 +82,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         
         childChossen.text! = "\(child1)'s Location"
         
-        func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            let userLoction: CLLocation = locations[0]
-            let latitude = userLoction.coordinate.latitude
-            let longitude = userLoction.coordinate.longitude
-            let latDelta: CLLocationDegrees = 0.05
-            let lonDelta: CLLocationDegrees = 0.05
-            let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-            let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-            let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-            self.myMapView.setRegion(region, animated: true)
-            self.myMapView.showsUserLocation = true
-            
-        }
-        
     }
     
     var speed: CLLocationSpeed! {
         
         didSet {
             
-//            mph = speed * 2.23694
+            mph = speed * 2.23694
             print(mph)
-            
-            if speed < 75 {
-                
-                print("Slow the FUCK DOWN")
-                
-            }
+
             // set hidden based on mph
         }
         
@@ -119,24 +100,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         
         didSet {
             
-            speedLabel.text = "\(Int(mph))"
+        speedLabel.text = "\(Int(mph))"
             
         }
         
     }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        for location in locations {
-            
-            print(location.coordinate.latitude, location.coordinate.longitude)
-            speed = location.speed
-            
-        }
-        
-    }
-    
-    
     
     @IBAction func pressedLogout(sender: AnyObject) {
         
@@ -163,51 +131,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MFMessageC
         print(childNumber)
         
     }
-    
-    @IBAction func messageButton(sender: AnyObject) {
-        
-        guard let childNumberSMS = parent?["childPhone"] as? String else { return }
-        
-        let messageVC = MFMessageComposeViewController()
-        
-        messageVC.body = ""
-        messageVC.recipients = ["\(childNumberSMS)"]
-        messageVC.messageComposeDelegate = self
-        
-        self.presentViewController(messageVC, animated: false, completion: nil)
-        
-    }
-    
-    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
-        
-        switch (result.rawValue) {
-            
-        case MessageComposeResultCancelled.rawValue:
-            
-            print("Message was cancelled")
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-        case MessageComposeResultFailed.rawValue:
-            
-            print("Message failed")
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-        case MessageComposeResultSent.rawValue:
-            
-            print("Message was sent")
-            self.dismissViewControllerAnimated(true, completion: nil)
-        
-        default:
-            
-            break;
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        // Dispose of any resources that can be recreated.
-    }
-    
-}
 
+}
